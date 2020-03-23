@@ -17,3 +17,5 @@ export default [
   ];
 
   
+  import images from './images-db.js';
+
