@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+img{
+    display: block;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+section{
+    padding: 20px 0;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    outline: 2px solid black;
+    padding-bottom: 100px;
+}
+
+.gallery{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    .gallery{
+        display: block;;
+    }
+}
+
+.gallery__item{
+    position: relative;
+    width: 100%;
+}
+
+.gallery__item::after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-color: #000;
+    opacity: .52;
+    top: 0;
+    left: 0;
+}
+
+.gallery__item:hover::after{
+    opacity: 0;
+}    
+@media only screen and (min-width: 600px) {
+    .gallery__item{
+        width: 33%;
+    }
+}
+
+
+.card_img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* COUNTER */
+.counter{
+    outline: 1px solid teal;
+    display: flex;
+    justify-content: space-between;
+    width: 10%;
+    margin: 0 auto;
+}
+
+/* INPUTS VALIDATION */
+
+#validation-input{
+    border: 3px solid #bdbdbd
+}
+/* .valid{
+    border: 2px solid green;
+}
+.invalid{
+    border: 2px solid red;
+} */
+
+#validation-input.valid {
+    border-color: #4caf50;
+  }
+  
+  #validation-input.invalid {
+    border-color: #f44336;
+  }
