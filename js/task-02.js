@@ -18,8 +18,7 @@ newLi.appendChild(document.createElement("h2")).textContent = "Ингредие�
 newLi.appendChild(document.createElement("ul")).id = 'ingredients';
 
 
-const ingredientsId = document.querySelector('#ingredients');
-console.log(ingredientsId);
+const ingredientsId = document.querySelector('#ingredients'); 
 
 for(const elem of ingredients){
     ingredientsId.appendChild(document.createElement('li')).textContent = elem;

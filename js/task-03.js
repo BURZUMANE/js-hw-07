@@ -42,7 +42,6 @@ function renderCards({url, alt}){
 const reduceCards = function(arr){
     return arr.reduce((cards, card) =>{
         let current = renderCards(card);
-        console.log(current);
         cards.push(current);
         return cards;
     }, []);

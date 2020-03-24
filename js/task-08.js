@@ -5,8 +5,6 @@ const create = document.querySelector('button[data-action="render"]');
 const destroy = document.querySelector('button[data-action="destroy"]');
 const value = document.querySelector("input[type='number']");
 
-console.log(value);
-
 const createBoxes = function(amount) {
     let result = ''
     let divWidth = 30;
@@ -20,9 +18,10 @@ const createBoxes = function(amount) {
     //     div.style.width = `${divWidth + divWidthCounter}px`
     //     div.style.color =`#${randomColor}`
     //     divWidthCounter += 10;
-    //     console.log(div);
     //     fragment.appendChild(div);
-    // }
+    // };
+    // console.log(fragment);
+    // return fragment;
 
 
     // OLD VERSION
@@ -41,7 +40,8 @@ create.addEventListener('click', e => {
     boxes.innerHTML = '';
     boxes.insertAdjacentHTML('afterbegin', createBoxes(value.value));
     // console.log(value.value);
-    // boxes.appendChild(createBoxes(value.value));
+    // console.log(`${createBoxes(...value.value)} hello`);
+    // boxes.append(createBoxes(value.value));
 
 })
 
