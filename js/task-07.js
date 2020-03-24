@@ -2,11 +2,7 @@
 
 const range = document.querySelector('#font-size-control');
 const font = document.querySelector('#text');
-
-range.addEventListener('input', e => {
-    if(e.currentTarget.value == 72){
-        alert('oooohhhh shit');
-    }
+function changeFontSize(e) {
     text.style.fontSize = `${e.currentTarget.value}px`;
-
-});
+}
+range.addEventListener('input', changeFontSize);

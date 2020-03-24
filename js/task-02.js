@@ -9,17 +9,12 @@ const ingredients = [
     'Приправы',
   ];
 
+const ingredientsFragment = document.createDocumentFragment();
+ingredients.forEach(function(ingredient) {
+  let li = document.createElement('li');
+  li.textContent = ingredient;
+  ingredientsFragment.appendChild(li);
+});
 
-// Creating new nodes
-const newLi = document.querySelector('#categories').appendChild(document.createElement("li"));
-newLi.classList.add('items');
-// Appending children
-newLi.appendChild(document.createElement("h2")).textContent = "Ингредиенты"
-newLi.appendChild(document.createElement("ul")).id = 'ingredients';
-
-
-const ingredientsId = document.querySelector('#ingredients'); 
-
-for(const elem of ingredients){
-    ingredientsId.appendChild(document.createElement('li')).textContent = elem;
-}
+const ingredientsId = document.querySelector('#ingredients');
+ingredientsId.append(ingredientsFragment);
